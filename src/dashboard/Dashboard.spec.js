@@ -24,23 +24,11 @@ test('Gate cannot be closed or opened if it is locked', () => {
 
 test('Gate cannot be closed or opened if it is locked', () => {
     const {getByText, getByTestId} = render(<Dashboard />)
-    const lockButton = getByTestId('lockButton');
-    fireEvent.click(lockButton)
-    getByText('Unlock Gate')
-})
-
-test('Gate cannot be closed or opened if it is locked', () => {
-    const {getByText, getByTestId} = render(<Dashboard />)
     const closeButton = getByTestId('closeButton');
     fireEvent.click(closeButton)
     getByText('Open Gate')
 })
 
-test('Gate cannot be closed or opened if it is locked', () => {
-    const {getByText, getByTestId} = render(<Dashboard />)
-    const closeButton = getByTestId('closeButton');
-    fireEvent.click(closeButton)
-    getByText('Close Gate')
-})
+
 
 
